@@ -11,10 +11,18 @@ function MiniEcommerce () {
   const [exibirCheckout, setExibirCheckout] = useState(false);
   const [total, setExibirTotal] = useState('0,00');
 
+
+  function adicionarProduto(produto) {
+    
+  }
+
   return (
     <div>
       <Menu/>
-      <Produtos/>
+      <Produtos
+        visivel={exibirProdutos}
+        adicionarProduto={adicionarProduto}
+      />
       <Checkout/>
     </div>
   );
