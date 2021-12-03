@@ -9,7 +9,7 @@ function MiniEcommerce () {
   const [carrinho, setCarrinho] = useState({ produtos: [] });
   const [exibirProdutos, setExibirProdutos] = useState(true);
   const [exibirCheckout, setExibirCheckout] = useState(false);
-  const [total, setExibirTotal] = useState('0,00');
+  const [total, setTotal] = useState('0,00');
 
 
   function adicionarProduto(produto) {
@@ -33,9 +33,23 @@ function MiniEcommerce () {
     setCarrinho(objCarrinho);
   }
 
+  function handleExibirProdutos () {
+    setExibirCheckout(false);
+    setExibirProdutos(true);
+  }
+
+  function handleExibirCheckout (total) {
+    setExibirCheckout(true);
+    setExibirProdutos(false);
+    setTotal(total);
+  }
+
   return (
     <div>
-      <Menu/>
+      <Menu
+        produtos={carrinho.produtos}
+        handleExibirProdutos={handleExibirProdutos}
+        handleExibirCheckout={handleExibirCheckout}/>
       <Produtos
         visivel={exibirProdutos}
         adicionarProduto={adicionarProduto}
