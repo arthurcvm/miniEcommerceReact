@@ -8,7 +8,7 @@ function ItensCarrinhoMenu (props) {
     function render () {
         if (props.produtos.length === 0) {
             return (
-                <NavDropdown.Item href="" data-testeid="items">
+                <NavDropdown.Item href="" data-testid="itens">
                     <FontAwesomeIcon icon={faSadTear} />
                     &nbsp;
                     Carrinho vazio...
