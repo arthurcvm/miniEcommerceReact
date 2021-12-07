@@ -125,7 +125,7 @@ function Checkout (props) {
                             name="cidade"
                             data-testid="cidade" >
                             <option value="">Selecione a cidade</option>
-                            <ListarCidades estado={'PB'}/>
+                            <ListarCidades estado={''}/>
                                 </Form.Control>
                         <Form.Control.Feedback type="invalid">
                             Selecione a sua cidade.
