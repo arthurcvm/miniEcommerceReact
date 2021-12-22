@@ -32,7 +32,7 @@ function Menu (props) {
                                 Carrinho
                             </div>
                         }
-                    drop="start">
+                    drop="left">
                         <NavDropdown.Item href=""
                         onClick={props.handleExibirProdutos}>
                             <FontAwesomeIcon icon={faShoppingBasket} />

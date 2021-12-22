@@ -378,7 +378,7 @@ Checkout.propTypes = {
     handleExibirProdutos: PropTypes.func.isRequired,
     total: PropTypes.string.isRequired,
     produtos: PropTypes.object.isRequired,
-    handleLimparCarrinho: PropTypes.object.isRequired
+    handleLimparCarrinho: PropTypes.func.isRequired
 }
 
 export default Checkout;

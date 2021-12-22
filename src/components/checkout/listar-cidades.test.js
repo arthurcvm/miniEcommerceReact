@@ -5,9 +5,9 @@ import ListarCidades from './listar-cidades';
 describe('Teste do componente de listagem de cidades.', () => {
     it('deve gerar uma listagem de cidades', async () => {
         axiosMock.get.mockResolvedValueOnce({data: ['São Paulo', 'São Pedro']})
-        const { getByTestId } = render(<ListarCidades estado="SP" />);
+        const { findByTestId } = render(<ListarCidades estado="SP" />);
         expect(axiosMock.get).toHaveBeenCalledTimes(1);
-        expect(await screen.findByTestId('São Paulo')).toHaveTextContent('São Paulo');
-        expect(await screen.findByTestId('São Pedro')).toHaveTextContent('São Pedro');
+        expect(await findByTestId('São Paulo')).toHaveTextContent('São Paulo');
+        expect(await findByTestId('São Pedro')).toHaveTextContent('São Pedro');
     })
 })
